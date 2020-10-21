@@ -15,8 +15,7 @@
     -->
   <style>
     .centerb {
-      background-color: white;
-      background-image: url('');
+      background-color: #E6FEE1;
     }
 
     .boticon {
@@ -29,11 +28,11 @@
     }
 
     .bars {
-      background: #7dd1a7;
+      background: #47FCDE;
     }
 
     .lateral {
-      background: #a1eddb;
+      background: #9FFDE0;
     }
 
     a {
@@ -43,6 +42,22 @@
     .refsize {
       font-size: 13px;
     }
+
+    .lateralimg {
+      vertical-align: middle;
+      width: auto;
+      max-height: 71px;
+      height: auto;
+      margin: 10px;
+    }
+
+    .imgcustom {
+      vertical-align: middle;
+      width: auto;
+      max-height: 150px;
+      height: auto;
+      margin: 10px;
+    }
   </style>
 
   <title>OLD&NEW eSHOP</title>
@@ -51,12 +66,12 @@
 <body>
 
   <!--Barra Superior-->
-  <nav class="navbar navbar-expand-sm navbar-light bars">
+  <nav class="navbar navbar-expand-sm navbar-light bars shadow border-bottom border-secondary">
     <a class="navbar-brand" href="#">
       <h3 class="navbar-brand">OLD&NEW eSHOP</h3>
     </a>
     <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+      <input class="form-control pr-5 mr-2" type="search" placeholder="Buscar" aria-label="Buscar">
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
     </form>
     <button class="btn ml-auto" type="submit">Autenticación</button>
@@ -65,8 +80,8 @@
     </button>
   </nav>
 
-  <div class="centerb">
-    <!--Centro-->
+  <!--Centro-->
+  <div class="centerb border border-dark">
     <div class="row centerb">
       <div class="container col-md-9">
 
@@ -84,7 +99,7 @@
             <div class="col-md-2">
               <div class="row">
                 <div class="bd-placeholder-img">
-                  <a href=""><img src="/img/gamecube.png" alt="" class="img-fluid  w-75"></a>
+                  <a href=""><img src="/img/gamecube.png" alt="" class="img-fluid imgcustom"></a>
                 </div>
               </div>
               <div class="row">
@@ -98,7 +113,7 @@
             <div class="col-md-2">
               <div class="row">
                 <div class="bd-placeholder-img">
-                  <a href=""><img src="/img/mariokart live.jpg" alt="" class="img-fluid  w-75"></a>
+                  <a href=""><img src="/img/mariokart live.jpg" alt="" class="img-fluid imgcustom"></a>
                 </div>
               </div>
               <div class="row">
@@ -112,7 +127,7 @@
             <div class="col-md-2">
               <div class="row">
                 <div class="bd-placeholder-img">
-                  <a href=""><img src="/img/wow.png" alt="" class="img-fluid  w-75"></a>
+                  <a href=""><img src="/img/wow.png" alt="" class="img-fluid imgcustom"></a>
                 </div>
               </div>
               <div class="row">
@@ -126,7 +141,7 @@
             <div class="col-md-2">
               <div class="row">
                 <div class="bd-placeholder-img">
-                  <a href=""><img src="/img/mandopro.png" alt="" class="img-fluid  w-75"></a>
+                  <a href=""><img src="/img/mandopro.png" alt="" class="img-fluid imgcustom"></a>
                 </div>
               </div>
               <div class="row">
@@ -153,42 +168,33 @@
             <div class="col-md-3">
               <div class="row">
                 <div class="bd-placeholder-img">
-                  <a href=""><img src="/img/odyssey.jpg" alt="" class="img-fluid  w-75"></a>
+                  <a href=""><img src="/img/odyssey.jpg" alt="" class="img-fluid imgcustom"></a>
                 </div>
               </div>
               <div class="row">
-                <h5>270,00€</h5>
-              </div>
-              <div class="row">
-                <strike>300,00€</strike> - 10% de descuento
+                <h5>40,00€</h5>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="row">
                 <div class="bd-placeholder-img">
-                  <a href=""><img src="/img/ringfit.jpg" alt="" class="img-fluid  w-75"></a>
+                  <a href=""><img src="/img/ringfit.jpg" alt="" class="img-fluid imgcustom"></a>
                 </div>
               </div>
               <div class="row">
-                <h5>10,00€</h5>
-              </div>
-              <div class="row">
-                <strike>20,00€</strike> - 10% de descuento
+                <h5>100,00€</h5>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="row">
                 <div class="bd-placeholder-img">
-                  <a href=""><img src="/img/sdswitch.jpg" alt="" class="img-fluid w-75"></a>
+                  <a href=""><img src="/img/sdswitch.jpg" alt="" class="img-fluid imgcustom w-auto"></a>
                 </div>
               </div>
               <div class="row">
-                <h5>6,30€</h5>
-              </div>
-              <div class="row">
-                <strike>7,00€</strike> - 10% de descuento
+                <h5>10,30€</h5>
               </div>
             </div>
 
@@ -197,7 +203,7 @@
       </div>
 
       <!--Columna lateral-->
-      <div class="col-md-2 rounded lateral mt-3 mb-3">
+      <div class="col-md-2 rounded lateral mt-3 mb-3 shadow border border-secondary">
         <h6 class="mt-2">Lo más vendido</h6>
 
         <div class="d-flex flex-row">
@@ -207,7 +213,7 @@
           </div>
 
           <div class="d-flex flex-column m-2">
-            <a href=""><img src="/img/minecraft.jpg" alt="" class="img-fluid w-25"></a>
+            <a href=""><img src="/img/minecraft.jpg" alt="" class="img-fluid lateralimg"></a>
           </div>
 
         </div>
@@ -219,7 +225,7 @@
           </div>
 
           <div class="d-flex flex-column m-2">
-            <a href=""><img src="/img/microusb.jpg" alt="" class="img-fluid w-25"></a>
+            <a href=""><img src="/img/microusb.jpg" alt="" class="img-fluid lateralimg"></a>
           </div>
 
         </div>
@@ -230,7 +236,7 @@
           </div>
 
           <div class="d-flex flex-column m-2">
-            <a href=""><img src="/img/smash.jpg" alt="" class="img-fluid w-25"></a>
+            <a href=""><img src="/img/smash.jpg" alt="" class="img-fluid lateralimg"></a>
           </div>
 
         </div>
@@ -241,7 +247,7 @@
           </div>
 
           <div class="d-flex flex-column m-2">
-            <a href=""><img src="/img/infamous.jpg" alt="" class="img-fluid w-25"></a>
+            <a href=""><img src="/img/infamous.jpg" alt="" class="img-fluid lateralimg"></a>
           </div>
 
         </div>
@@ -252,7 +258,7 @@
           </div>
 
           <div class="d-flex flex-column m-2">
-            <a href=""><img src="/img/uncharted.jpg" alt="" class="img-fluid w-25"></a>
+            <a href=""><img src="/img/uncharted.jpg" alt="" class="img-fluid lateralimg"></a>
           </div>
 
         </div>
@@ -263,7 +269,7 @@
   </div>
 
   <!--Barra Inferior-->
-  <footer class="page-footer bars border-bottom text-black-100">
+  <footer class="page-footer bars text-black-100 border-top border-secondary pb-2">
     <div class="container-fluid text-md-left ml-3 mb-3 mr-3">
       <div class="row">
         <div class="col-md-3">

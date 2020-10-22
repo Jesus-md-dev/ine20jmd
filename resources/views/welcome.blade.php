@@ -15,7 +15,7 @@
     -->
   <style>
     .centerb {
-      background-color: #E6FEE1;
+      background-color: white;
     }
 
     .boticon {
@@ -27,16 +27,26 @@
       background: #aaa;
     }
 
-    .bars {
-      background: #47FCDE;
+    .tbar {
+      background: black;
+      color: white;
+    }
+
+    a{
+      color: black
+    }
+
+    .bbar {
+      background: lightgrey;
+      color: black;
+    }
+
+    .whitetext {
+      color: white;
     }
 
     .lateral {
-      background: #9FFDE0;
-    }
-
-    a {
-      color: black
+      background: whitesmoke;
     }
 
     .refsize {
@@ -66,16 +76,16 @@
 <body>
 
   <!--Barra Superior-->
-  <nav class="navbar navbar-expand-sm navbar-light bars shadow border-bottom border-secondary">
+  <nav class="navbar navbar-expand-sm tbar shadow border-bottom border-secondary">
     <a class="navbar-brand" href="#">
-      <h3 class="navbar-brand">OLD&NEW eSHOP</h3>
+      <h3 class="whitetext navbar-brand">OLD&NEW eSHOP</h3>
     </a>
     <form class="form-inline">
       <input class="form-control pr-5 mr-2" type="search" placeholder="Buscar" aria-label="Buscar">
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
     </form>
-    <button class="btn ml-auto" type="submit">Autenticación</button>
-    <button class="btn" type="submit">
+    <button class="btn ml-auto whitetext" type="submit">Autenticación</button>
+    <button class="btn btn-light" type="submit">
       <img src="/ico/cesta.png" alt="" width="40">
     </button>
   </nav>
@@ -262,14 +272,14 @@
           </div>
 
         </div>
-        <button class="btn btn-primary m-2">Ver más</button>
+        <button class="btn btn-dark m-2">Ver más</button>
 
       </div>
     </div>
   </div>
 
   <!--Barra Inferior-->
-  <footer class="page-footer bars text-black-100 border-top border-secondary pb-2">
+  <footer class="page-footer bbar text-black-100 border-top border-secondary pb-2">
     <div class="container-fluid text-md-left ml-3 mb-3 mr-3">
       <div class="row">
         <div class="col-md-3">
@@ -295,10 +305,10 @@
         <div class="col-md-3">
           <div class="row mb-1 mt-3"><b>Contacto</b></div>
           <div class="row refsize"> <a href=""> Atencion al cliente </a> </div>
-          <div class="row refsize"> <a href=""> Twitter <img src="/ico/twitter.png" alt="" class="boticon"> </a> </div>
-          <div class="row refsize"> <a href=""> Facebook <img src="/ico/facebook.png" alt="" class="boticon"> </a> </div>
-          <div class="row refsize"> <a href=""> Youtube <img src="/ico/youtube.png" alt="" class="boticon"> </a> </div>
-          <div class="row refsize"> <a href=""> Instagram <img src="/ico/instagram.png" alt="" class="boticon"> </a> </div>
+          <div class="row refsize"> <a href=""> <img src="/ico/twitter.png" alt="" class="boticon"> Twitter </a> </div>
+          <div class="row refsize"> <a href=""> <img src="/ico/facebook.png" alt="" class="boticon"> Facebook </a> </div>
+          <div class="row refsize"> <a href=""> <img src="/ico/youtube.png" alt="" class="boticon"> Youtube </a> </div>
+          <div class="row refsize"> <a href=""> <img src="/ico/instagram.png" alt="" class="boticon"> Instagram </a> </div>
         </div>
       </div>
     </div>

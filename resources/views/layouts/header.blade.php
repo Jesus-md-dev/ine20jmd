@@ -1,4 +1,3 @@
-@section('header')
 
 <nav class="navbar navbar-expand-sm tbar shadow border-bottom border-secondary">
     <a class="navbar-brand" href="#">

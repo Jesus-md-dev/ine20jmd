@@ -1,6 +1,3 @@
-@include('layouts.header')
-@extends('layouts.footer')
-
 <!doctype html>
 <!-- Bootstrap first template for Internet y Negocio Electrónico, University of Cadiz,
      since 2019, based on https://www.w3schools.com/bootstrap4/bootstrap_templates.asp -->
@@ -76,7 +73,11 @@
     <title>OLD&NEW eSHOP</title>
 </head>
 
+
+
 <body>
+
+    @include('layouts.header')
 
     <div class="centerb border border-dark">
         <div class="row centerb">
@@ -92,8 +93,7 @@
         </div>
     </div>
 
-
-
+    @include('layouts.footer')
 
     <!-- Loading Javascripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -103,6 +103,7 @@
     </script>
     <!-- <script src="../../assets/js/vendor/popper.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

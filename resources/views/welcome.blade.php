@@ -11,62 +11,27 @@
 
   <!--Productos-->
   <div class="row d-flex justify-content-around">
-
-    <div class="col-md-2">
+    @foreach($aProduct_offering as $pOffering)
+    <div class="col">
       <div class="row">
         <div class="bd-placeholder-img">
-          <a href=""><img src="/img/gamecube.png" alt="" class="img-fluid imgcustom"></a>
+          <a href=""><img src="<?= $pOffering->imgurl ?>" alt="" class="img-fluid imgcustom"></a>
         </div>
       </div>
       <div class="row">
-        <h5>270,00€</h5>
+        <h5><?= $pOffering->name ?></h5>
       </div>
       <div class="row">
-        <strike>300,00€</strike> - 10% de descuento
+        <h6><?php
+            echo $pOffering->price * (1 - ($pOffering->discountPercent / 100));
+            ?>€ <strike><?= $pOffering->price ?>€ </strike>
+        </h6>
+      </div>
+      <div class="row">
+        <p><?= $pOffering->discountPercent ?>% de descuento</p>
       </div>
     </div>
-
-    <div class="col-md-2">
-      <div class="row">
-        <div class="bd-placeholder-img">
-          <a href=""><img src="/img/mariokart live.jpg" alt="" class="img-fluid imgcustom"></a>
-        </div>
-      </div>
-      <div class="row">
-        <h5>450,00€</h5>
-      </div>
-      <div class="row">
-        <strike>500,00€</strike> - 10% de descuento
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="row">
-        <div class="bd-placeholder-img">
-          <a href=""><img src="/img/wow.png" alt="" class="img-fluid imgcustom"></a>
-        </div>
-      </div>
-      <div class="row">
-        <h5>10,00€</h5>
-      </div>
-      <div class="row">
-        <strike>20,00€</strike> - 10% de descuento
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="row">
-        <div class="bd-placeholder-img">
-          <a href=""><img src="/img/mandopro.png" alt="" class="img-fluid imgcustom"></a>
-        </div>
-      </div>
-      <div class="row">
-        <h5>6,30€</h5>
-      </div>
-      <div class="row">
-        <strike>7,00€</strike> - 10% de descuento
-      </div>
-    </div>
+    @endforeach
   </div>
 </div>
 
@@ -80,40 +45,35 @@
 
   <!--Productos-->
   <div class="row d-flex justify-content-around">
-
-    <div class="col-md-3">
+    @foreach($aProduct_new as $pNew)
+    <?php $bHasDiscount = $pNew->HasDiscount() ?>
+    <div class="col">
       <div class="row">
         <div class="bd-placeholder-img">
-          <a href=""><img src="/img/odyssey.jpg" alt="" class="img-fluid imgcustom"></a>
+          <h1><?php $pNew->imgurl ?></h1>
+          <a href=""><img src="<?= $pNew->imgurl ?>" alt="" class="img-fluid imgcustom"></a>
         </div>
       </div>
       <div class="row">
-        <h5>40,00€</h5>
+        <h5><?= $pNew->name ?></h5>
       </div>
+      @if($bHasDiscount)
+      <div class="row">
+        <h6><?php
+            echo $pNew->price * (1 - ($pNew->discountPercent / 100));
+            ?>€ <strike><?= $pNew->price ?>€ </strike>
+        </h6>
+      </div>
+      <div class="row">
+        <p><?= $pNew->discountPercent ?>% de descuento</p>
+      </div>
+      @else
+      <div class="row">
+        <h6><?= $pNew->price?>€</h6>
+      </div>
+      @endif
     </div>
-
-    <div class="col-md-3">
-      <div class="row">
-        <div class="bd-placeholder-img">
-          <a href=""><img src="/img/ringfit.jpg" alt="" class="img-fluid imgcustom"></a>
-        </div>
-      </div>
-      <div class="row">
-        <h5>100,00€</h5>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="row">
-        <div class="bd-placeholder-img">
-          <a href=""><img src="/img/sdswitch.jpg" alt="" class="img-fluid imgcustom w-auto"></a>
-        </div>
-      </div>
-      <div class="row">
-        <h5>10,30€</h5>
-      </div>
-    </div>
-
+    @endforeach
   </div>
 </div>
 @endsection

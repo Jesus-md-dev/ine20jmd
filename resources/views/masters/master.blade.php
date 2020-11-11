@@ -63,8 +63,8 @@
 
         .imgcustom {
             vertical-align: middle;
+            max-height: 105px;
             width: auto;
-            max-height: 150px;
             height: auto;
             margin: 10px;
         }
@@ -82,7 +82,7 @@
     <div class="centerb border border-dark">
         <div class="row centerb">
             <!--Centro-->
-            <div class="container col-md-9">
+            <div class="container col-md-8">
                 @yield('content-center')
             </div>
 

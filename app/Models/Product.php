@@ -23,15 +23,25 @@ class Product extends Model
             )->get();
     }
 
-    static function NewProducts()
-    {
+    static function NewProducts() {
         $sNow = date('Y-m-d H:i:s');
-        $sNextWeek = date('Y-m-d H:i:s', strtotime($sNow . ' + 1 week'));
-        return Product::where(DB::raw(
-            'date_format(updated_at, "%Y-%m-%d")'),
-            '>=', date('Y-m-d', strtotime($sNow)))->
-            where('updated_at', '<=', date('Y-m-d',
-            strtotime($sNextWeek)
-        ))->get();
+        $sLastWeek = date('Y-m-d H:i:s', strtotime($sNow . ' - 1 week'));
+
+        return Product::where(
+            DB::raw('date_format(updated_at, "%Y-%m-%d")'),
+            '<=', date('Y-m-d', strtotime($sNow)))->
+            where(
+            DB::raw('date_format(updated_at, "%Y-%m-%d")'),
+            '>=',
+            date('Y-m-d', strtotime($sLastWeek))
+        )->get();
+    }
+
+    function HasDiscount() {
+        $sNow = date('Y-m-d H:i:s');
+        if($this->discountStart_at <= $sNow && $this->discountEnd_at >= $sNow && $this->discountPercent != null)
+            return true;
+        else
+            return false;
     }
 }

@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-sm tbar shadow border-bottom border-secondary">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
         <h3 class="whitetext navbar-brand">OLD&NEW eSHOP</h3>
     </a>
     <form class="form-inline">

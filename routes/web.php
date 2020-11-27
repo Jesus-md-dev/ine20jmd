@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',
     'App\Http\Controllers\ProductController@welcome')
     ->name('home');
+
+Route::get('/product/{product}',
+    'App\Http\Controllers\ProductController@detail')
+    ->name('product');

@@ -15,20 +15,19 @@
     <div class="col">
       <div class="row">
         <div class="bd-placeholder-img">
-          <a href=""><img src="<?= $pOffering->imgurl ?>" alt="" class="img-fluid imgcustom"></a>
+          <a href="/product/{{$pOffering->id}}"><img src="{{ $pOffering->imgurl }}" alt="" class="imgcustom"></a>
         </div>
       </div>
       <div class="row">
-        <h5><?= $pOffering->name ?></h5>
+        <h5>{{ $pOffering->name }}</h5>
       </div>
       <div class="row">
-        <h6><?php
-            echo $pOffering->price * (1 - ($pOffering->discountPercent / 100));
-            ?>€ <strike><?= $pOffering->price ?>€ </strike>
+        <h6>{{ $pOffering->price * (1 - ($pOffering->discountPercent / 100))}}
+          € <strike>{{ $pOffering->price }}€ </strike>
         </h6>
       </div>
       <div class="row">
-        <p><?= $pOffering->discountPercent ?>% de descuento</p>
+        <p>{{ $pOffering->discountPercent }}% de descuento</p>
       </div>
     </div>
     @endforeach
@@ -46,30 +45,29 @@
   <!--Productos-->
   <div class="row d-flex justify-content-around">
     @foreach($aProduct_new as $pNew)
-    <?php $bHasDiscount = $pNew->HasDiscount() ?>
     <div class="col">
       <div class="row">
         <div class="bd-placeholder-img">
-          <h1><?php $pNew->imgurl ?></h1>
-          <a href=""><img src="<?= $pNew->imgurl ?>" alt="" class="img-fluid imgcustom"></a>
+          <h1><{{ $pNew->imgurl }}</h1>
+          <a href="/product/{{$pNew->id}}"><img src="{{ $pNew->imgurl }}" alt="" class="img-fluid imgcustom"></a>
         </div>
       </div>
       <div class="row">
-        <h5><?= $pNew->name ?></h5>
+        <h5>{{ $pNew->name }}</h5>
       </div>
-      @if($bHasDiscount)
+      @if($pNew->HasDiscount())
       <div class="row">
-        <h6><?php
-            echo $pNew->price * (1 - ($pNew->discountPercent / 100));
-            ?>€ <strike><?= $pNew->price ?>€ </strike>
+        <h6>
+            {{ $pNew->price * (1 - ($pNew->discountPercent / 100))}}
+            € <strike>{{ $pNew->price }}€ </strike>
         </h6>
       </div>
       <div class="row">
-        <p><?= $pNew->discountPercent ?>% de descuento</p>
+        <p>{{ $pNew->discountPercent }}% de descuento</p>
       </div>
       @else
       <div class="row">
-        <h6><?= $pNew->price?>€</h6>
+        <h6>{{ $pNew->price }}€</h6>
       </div>
       @endif
     </div>

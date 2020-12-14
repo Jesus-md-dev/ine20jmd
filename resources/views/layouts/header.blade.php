@@ -8,7 +8,16 @@
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
     </form>
     <button class="btn ml-auto whitetext" type="submit">Autenticación</button>
-    <button class="btn btn-light" type="submit">
-        <img src="/ico/cesta.png" alt="" width="40">
-    </button>
+    <a href="{{route('cart.show')}}">
+        <button class="btn btn-light" type="submit">
+            <img src="/ico/cesta.png" alt="" width="30">
+        </button>
+    </a>
+    <h4 class="ml-3">
+    @php
+        $cart = session()->get('cart', NULL);
+        if ($cart != NULL)
+            echo($cart->iTotalItems)
+    @endphp
+    </h4>
 </nav>

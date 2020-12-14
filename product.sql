@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-11-2020 a las 17:43:25
+-- Tiempo de generación: 13-12-2020 a las 19:34:00
 -- Versión del servidor: 8.0.17
 -- Versión de PHP: 7.3.10
 
@@ -92,10 +92,10 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `company_id`, `name`, `description`, `imgurl`, `price`, `discountPercent`, `discountStart_at`, `discountEnd_at`, `created_at`, `updated_at`) VALUES
-(2, 1, 'Game Cube', 'Descripcion1', '/img/gamecube.png', 12.00, 10.00, '2020-11-21 00:00:00', '2020-11-28 00:00:00', '2020-11-12 23:00:00', '2020-11-12 23:00:00'),
-(3, 1, 'Mando Pro', 'Descripcion2', '/img/mandopro.png', 23.00, 10.00, '2020-11-16 00:00:00', '2020-11-30 00:00:00', '2020-11-25 23:00:00', '2020-11-25 23:00:00'),
-(4, 2, 'Mario Kart Live', 'Descripcion3', '/img/mariokart live.jpg', 100.00, 11.00, '2020-11-22 00:00:00', '2020-11-30 00:00:00', '2020-11-25 23:00:00', '2020-11-25 23:00:00'),
-(5, 3, 'Ring Fit Adventure', 'Descripcion4', '/img/ringfit.jpg', 200.00, 20.00, '2020-11-19 00:00:00', '2020-11-21 00:00:00', '2020-11-26 23:00:00', '2020-11-26 23:00:00');
+(2, 1, 'Game Cube', 'Descripcion1', '/img/gamecube.png', 12.00, 10.00, '2020-11-21 00:00:00', '2020-11-30 00:00:00', '2020-12-10 23:00:00', '2020-12-10 23:00:00'),
+(3, 1, 'Mando Pro', 'Descripcion2', '/img/mandopro.png', 23.00, 10.00, '2020-11-16 00:00:00', '2021-01-16 00:00:00', '2020-11-25 23:00:00', '2020-11-25 23:00:00'),
+(4, 2, 'Mario Kart Live', 'Descripcion3', '/img/mariokart live.jpg', 100.00, 11.00, '2020-11-22 00:00:00', '2021-01-28 00:00:00', '2020-11-25 23:00:00', '2020-11-25 23:00:00'),
+(5, 3, 'Ring Fit Adventure', 'Descripcion4', '/img/ringfit.jpg', 200.00, 20.00, '2020-11-19 00:00:00', '2021-01-21 00:00:00', '2020-11-26 23:00:00', '2020-11-26 23:00:00');
 
 --
 -- Índices para tablas volcadas

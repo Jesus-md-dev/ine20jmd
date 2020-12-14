@@ -20,3 +20,15 @@ Route::get('/',
 Route::get('/product/{product}',
     'App\Http\Controllers\ProductController@detail')
     ->name('product');
+
+Route::get('/addToCart/{product}',
+    'App\Http\Controllers\ProductController@addToCart')
+    ->name('cart.add');
+
+Route::get('/cartDetail',
+    'App\Http\Controllers\CartController@show')
+    ->name('cart.show');
+
+Route::get('/cart/{operation}/{product}',
+    'App\Http\Controllers\CartController@operation')
+    ->name('cart.operation');

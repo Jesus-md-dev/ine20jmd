@@ -30,6 +30,7 @@
                 <h6><?= $product->price?>€</h6>
             @endif
         </div>
+        <a href="{{ route('cart.add', $product->id) }}" class="btn btn-lg btn-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Añadir al carrito </a>
     </div>
 </div>
   </section>

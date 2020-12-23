@@ -27,4 +27,22 @@ class ProductController extends Controller
         
         return redirect()->route('product', $product->id)->with('success', 'El producto ha sido añadido al carro');
     }
+
+    public function edit(Product $product) {
+        return view('product.edit', compact('product'));
+    }
+
+    public function save(Request $request) {
+        $product = Product::find($request->id);
+
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->discountPercent = $request->discountPercent;
+        $product->discountStart_at = $request->discountStart_at;
+        $product->discountEnd_at = $request->discountEnd_at;
+        $product->save();
+        return back()->with(['success' =>
+        ['Los datos han sido modificados.']]);
+    }
 }

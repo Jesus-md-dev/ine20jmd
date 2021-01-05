@@ -22,8 +22,8 @@
         <h5>{{ $pOffering->name }}</h5>
       </div>
       <div class="row">
-        <h6>{{ $pOffering->price * (1 - ($pOffering->discountPercent / 100))}}
-          € <strike>{{ $pOffering->price }}€ </strike>
+        <h6>{{ round($pOffering->price * (1 - ($pOffering->discountPercent / 100)), 2) }}
+          € <strike>{{ $pOffering->price }} € </strike>
         </h6>
       </div>
       <div class="row">
@@ -48,8 +48,8 @@
     <div class="col">
       <div class="row">
         <div class="bd-placeholder-img">
-          <h1><{{ $pNew->imgurl }}</h1>
-          <a href="/product/{{$pNew->id}}"><img src="{{ $pNew->imgurl }}" alt="" class="img-fluid imgcustom"></a>
+          <h1>
+            <{{ $pNew->imgurl }}</h1> <a href="/product/{{$pNew->id}}"><img src="{{ $pNew->imgurl }}" alt="" class="img-fluid imgcustom"></a>
         </div>
       </div>
       <div class="row">
@@ -58,8 +58,8 @@
       @if($pNew->HasDiscount())
       <div class="row">
         <h6>
-            {{ $pNew->price * (1 - ($pNew->discountPercent / 100))}}
-            € <strike>{{ $pNew->price }}€ </strike>
+          {{ round($pNew->price * (1 - ($pNew->discountPercent / 100)), 2) }}
+          € <strike>{{ $pNew->price }} € </strike>
         </h6>
       </div>
       <div class="row">

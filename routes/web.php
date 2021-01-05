@@ -32,3 +32,23 @@ Route::get('/cartDetail',
 Route::get('/cart/{operation}/{product}',
     'App\Http\Controllers\CartController@operation')
     ->name('cart.operation');
+
+Route::get('/user',
+    'App\Http\Controllers\UserController@edit')
+    ->name('user.edit');
+
+Route::post('/user/save',
+    'App\Http\Controllers\UserController@save')
+    ->name('user.save');
+
+Route::get('/product/edit/{product}',
+    'App\Http\Controllers\ProductController@edit')
+    ->name('product.edit');
+
+Route::post('/product/save',
+    'App\Http\Controllers\ProductController@save')
+    ->name('product.save');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

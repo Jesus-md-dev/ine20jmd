@@ -3,39 +3,40 @@
 @section('content-center')
 
 <div class="container bootdey">
-<div class="col-md-12">
-<section class="panel m-2">
-<div class="panel-body">
-    <div class="col-md-6">
-        <div class="pro-img-details">
+  <div class="col-md-12">
+    <section class="panel m-2">
+      <div class="panel-body">
+        <div class="col-md-6">
+          <div class="pro-img-details">
             <img src="{{$product->imgurl}}" alt="" class="imgdescription">
+          </div>
         </div>
-    </div>
-    <div class="col-md-6 ">
-        <h4 class="pro-d-title">
-                {{$product->name}}
-        </h4>
-        <h5>
-          Empresa: 
-          <a href="#" class=""> {{ $product->Company->name }} </a>
-        </h5>
-        <p>{{$product->description}}</p>
-        <div class="m-bot15"> 
-            <strong>Precio: </strong> 
-            @if($product->HasDiscount())<?php
-                    echo $product->price * (1 - ($product->discountPercent / 100));
-                    ?>€ <strike><?= $product->price ?>€ </strike>
-                <p><?= $product->discountPercent ?>% de descuento</p>
+        <div class="col-md-6 ">
+          <h4 class="pro-d-title">
+            {{$product->name}}
+          </h4>
+          <h5>
+            Empresa:
+            <a href="#" class=""> {{ $product->Company->name }} </a>
+          </h5>
+          <p>{{$product->description}}</p>
+          <div class="m-bot15">
+            <strong>Precio: </strong>
+            @if($product->HasDiscount())
+            {{round($product->price * (1 - ($product->discountPercent / 100)), 2)}} € 
+            <strike><?= $product->price ?> € </strike>
+            <p><?= $product->discountPercent ?>% de descuento</p>
             @else
-                <h6><?= $product->price?>€</h6>
+            <h6><?= $product->price ?>€</h6>
             @endif
+          </div>
+          <a href="{{ route('cart.add', $product->id) }}" class="btn btn-lg btn-primary"> Añadir al carrito </a>
+          <a href="{{ route('product.edit', $product->id) }}" class="btn btn-lg btn-primary m-2"> Editar Datos </a>
         </div>
-        <a href="{{ route('cart.add', $product->id) }}" class="btn btn-lg btn-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Añadir al carrito </a>
-    </div>
+      </div>
+    </section>
+  </div>
 </div>
-  </section>
-  </div>
-  </div>
 
 @endsection
 

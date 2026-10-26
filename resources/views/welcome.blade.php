@@ -86,7 +86,7 @@
   </div>
 
   <div class="d-flex flex-column m-2">
-    <a href=""><img src="/img/minecraft.jpg" alt="" class="img-fluid lateralimg"></a>
+    <a href=""><img src="/img/microfonos.jpg" alt="" class="img-fluid lateralimg"></a>
   </div>
 
 </div>
@@ -98,7 +98,7 @@
   </div>
 
   <div class="d-flex flex-column m-2">
-    <a href=""><img src="/img/microusb.jpg" alt="" class="img-fluid lateralimg"></a>
+    <a href=""><img src="/img/cable-usb.jpg" alt="" class="img-fluid lateralimg"></a>
   </div>
 
 </div>
@@ -110,7 +110,7 @@
   </div>
 
   <div class="d-flex flex-column m-2">
-    <a href=""><img src="/img/smash.jpg" alt="" class="img-fluid lateralimg"></a>
+    <a href=""><img src="/img/disco-externo.jpg" alt="" class="img-fluid lateralimg"></a>
   </div>
 
 </div>
@@ -122,7 +122,7 @@
   </div>
 
   <div class="d-flex flex-column m-2">
-    <a href=""><img src="/img/infamous.jpg" alt="" class="img-fluid lateralimg"></a>
+    <a href=""><img src="/img/raton.jpg" alt="" class="img-fluid lateralimg"></a>
   </div>
 
 </div>
@@ -134,7 +134,7 @@
   </div>
 
   <div class="d-flex flex-column m-2">
-    <a href=""><img src="/img/uncharted.jpg" alt="" class="img-fluid lateralimg"></a>
+    <a href=""><img src="/img/auriculares.jpg" alt="" class="img-fluid lateralimg"></a>
   </div>
 
 </div>
